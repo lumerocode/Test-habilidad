@@ -3,7 +3,15 @@ html, body {
     background: var(--bg-color);
 }
 
-//Tabs
+.tabs {
+    width: 386px;
+    height: 325px;
+    background: linear-gradient(180deg, #F1F1F1 -2.67%, #FFFFFF 3.08%);
+    border: 1px solid #E7E7ED;
+    border-radius: 8px;
+}
+
+//Tabs Content
 [data-content] {
     display: none;
 }
@@ -39,6 +47,40 @@ html, body {
     }
 }
 
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ===================== */
+@media screen and (max-width: 600px) {
+  
+    .section {
+        flex-direction: column;
+        row-gap: 25px;
+        justify-content: flex-start;
+        margin-top: 25px;
+    }
+
+    .tabs {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .section__desc {
+
+        text-align: center;
+
+        .section__title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+    
+        .section__text {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+    }
+
+  
+}
 
 
 

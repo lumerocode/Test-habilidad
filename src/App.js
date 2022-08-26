@@ -26,20 +26,35 @@ function App() {
   },[API]);
 
   //Tabs
-  const tabsAll = document.querySelectorAll('[data-tab]')
+  const tabsAll = document.querySelectorAll('[data-tabs]')
   const content = document.querySelectorAll('[data-content]')
 
   tabsAll.forEach(tab => {
     
     tab.addEventListener('click', () => {
 
+      //Recorrer cada content
       content.forEach(c => {
         c.classList.remove('tabs--active')
       })
 
-      const t = document.querySelector(tab.dataset.tab);
+      //Recorrer cada tab
+      tabsAll.forEach( e => {
+        e.classList.remove('border--active')
+        e.classList.add('border--active')
+      })
+
+      const t = document.querySelector(tab.dataset.tabs);
       t.classList.add('tabs--active');
+
+      console.log(t)
       
+
+      
+
+
+      
+
     })
 
   });
@@ -60,7 +75,8 @@ function App() {
           <div className='tabs__content'>
             <Purchase
             purchase={purchase_price}/>
-            <Sell/>
+            <Sell
+            sell={sale_price}/>
           </div>
         </div>
       </section>
