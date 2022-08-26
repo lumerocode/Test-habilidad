@@ -1,0 +1,44 @@
+html, body {
+    font-family: var(--font-rubik);
+    background: var(--bg-color);
+}
+
+//Tabs
+[data-content] {
+    display: none;
+}
+
+.tabs--active[data-content] {
+    display: block;
+}
+
+.section {
+    column-gap: 227px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+//Left Side
+.section__desc {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 340px;
+
+    .section__title {
+        font-size: 48px;
+        font-weight: 500;
+    }
+
+    .section__text {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+
+
+
