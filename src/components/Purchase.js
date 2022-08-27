@@ -3,6 +3,8 @@ import convert from '../assets/vector.png';
 
 export const Purchase = ({purchase}) => {
 
+
+
  const changePurchase = (e) => {
 
     const inputValue = parseFloat(document.querySelector('#valuePurchase').value);
@@ -20,7 +22,7 @@ export const Purchase = ({purchase}) => {
                 <p>Envías</p>
                 <div>
                     <span>$</span>
-                    <input id='valuePurchase' type='number'/>
+                    <input id='valuePurchase' type='number' name='value'/>
                 </div>
             </div>
         </div>

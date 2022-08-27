@@ -29,33 +29,25 @@ function App() {
   const tabsAll = document.querySelectorAll('[data-tabs]')
   const content = document.querySelectorAll('[data-content]')
 
+
   tabsAll.forEach(tab => {
-    
-    tab.addEventListener('click', () => {
 
-      //Recorrer cada content
-      content.forEach(c => {
-        c.classList.remove('tabs--active')
+      tab.addEventListener('click', () => {
+
+        //Recorrer cada content
+        content.forEach(c => {
+          c.classList.remove('tabs--active')
+        })
+
+        const t = document.querySelector(tab.dataset.tabs);
+        t.classList.add('tabs--active');
+
+        //Recorrer cada tab
+        tabsAll.forEach( e => {
+          e.classList.remove('border--active')
+        })
+        tab.classList.add('border--active')
       })
-
-      //Recorrer cada tab
-      tabsAll.forEach( e => {
-        e.classList.remove('border--active')
-        e.classList.add('border--active')
-      })
-
-      const t = document.querySelector(tab.dataset.tabs);
-      t.classList.add('tabs--active');
-
-      console.log(t)
-      
-
-      
-
-
-      
-
-    })
 
   });
 
@@ -65,7 +57,7 @@ function App() {
       <section className='section'>
         <div className='section__desc'>
           <h1 className='section__title'>El mejor tipo de cambio</h1>
-          <p className='section__text'>para cambiar dólares y soles online en Perú.</p>
+          <p className='section__text'>para cambiar dólares y soles online en Perú</p>
         </div>
 
         <div className='tabs'> 

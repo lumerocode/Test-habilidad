@@ -66,6 +66,7 @@ html, body {
     .section__desc {
 
         text-align: center;
+        padding: 0px 60px;
 
         .section__title {
             font-size: 24px;
@@ -73,6 +74,7 @@ html, body {
         }
     
         .section__text {
+            margin-top: 6px;
             font-size: 14px;
             font-weight: 400;
         }

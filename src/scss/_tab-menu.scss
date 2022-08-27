@@ -10,15 +10,14 @@
         text-align: center;
     }
 
-    .tab__purchase {
-        border-bottom: 2px solid var(--primary-color);
-        color: var(--primary-color);
-    }
-
     .border--active {
         border-bottom: 2px solid var(--primary-color);
         color: var(--primary-color);
         text-align: center;
+    }
+
+    .tab__current {
+        font-weight: 500;
     }
 
 }
